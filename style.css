@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 10px 0;
+    margin-top: 2%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+/* Hero section */
+.hero-section {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),url('background.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 8%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+h1 {
+    font-size: 60px;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+}
+
+.content {
+    max-width: 500px;
+    color: #fff;
+    text-align: center;
+    padding-top: 5%;
+    margin-right: 50%;
+    margin-top: 10%;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.email {
+    background-color:#F2F2F2;
+    border-radius: 30px;
+    width: 120%;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+}
+
+input[type="email"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    width: 100%;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: black;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .hero-section {
+        padding: 10px;
+        margin: 5%;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .content {
+        margin-right: 20%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    .email {
+        width: 100%;
+
+    }
+    .content {
+        margin-right: 0;
+        margin-top: 20%;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    input[type="email"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        height: auto;
+        margin: 5%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+    form {
+        flex-direction: column;
+    }
+    .email {
+        width: 100%;
+
+    }
+    input[type="email"] {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Horizontal scroll section */
+.horizontal-section {
+    background-color: rgb(173, 161, 161);
+    padding: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+/* Make grid responsive */
+@media (max-width: 768px) {
+    .horizontal-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .horizontal-section {
+        grid-template-columns: 1fr;
+    }
+}
+
+.item {
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    border-radius: 50px;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px;
+}
+
+/* Section for New York */
+.newyork-section {
+    text-align: left;
+    padding: 50px;
+    justify-items: center;
+}
+
+.newyork-section h2 {
+    font-size: 2rem;
+    color: black;
+    margin-bottom: 50px;
+}
+
+.background-image {
+    background-image: url('https://assets.nicepagecdn.com/11a8ddce/4460241/images/pexels-photo-325185.jpeg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border-radius: 50px;
+    margin: 8%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+@media (max-width: 768px) {
+    .background-image {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .background-image {
+        height: 50vh;
+    }
+}
+
+/* Grid container section */
+.section-3 {
+    background-color: #FBECED;
+}
+
+.grid-container-2 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 50px;
+    margin: 0 auto;
+    max-width: 1200px;
+    align-items: center;
+    justify-self: center;
+}
+
+@media (max-width: 768px) {
+    .grid-container-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .grid-container-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.grid-item-2 {
+    background-color: #fff;
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item-2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+    background-color: gray;
+}
+
+.grid-item-2:hover img {
+    transform: scale(1.1);
+}
